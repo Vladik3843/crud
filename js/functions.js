@@ -26,19 +26,23 @@ function guardarCrud(){
           
                ajaxRequest.onreadystatechange = function(){
                 if(ajaxRequest.readyState == 4){
-                 var ajaxDisplay = document.getElementById('ajaxDiv');
+                 var ajaxDisplay = document.getElementById('info');
                  ajaxDisplay.innerHTML = ajaxRequest.responseText;
                }
              }
   
-               var texto = document.getElementById('busqueda').value;
-               //var origen= document.getElementsByName('origen').value;
-               //alert(texto);
-               var queryString = "?texto=" + texto;
-               queryString +=  "&valore=" + valore;
+               var texto = document.getElementById('nombre').value;
+
+               var queryString = "?nombre=" + texto;
+               queryString += "&appat=" + document.getElementById('appat').value;
+               queryString += "&apmat=" + document.getElementById('apmat').value;
+               queryString += "&rfc=" + document.getElementById('rfc').value;
+               queryString += "&domicilio=" + document.getElementById('domicilio').value;
+               queryString += "&tel=" + document.getElementById('tel').value;
+               queryString += "&mail=" + document.getElementById('mail').value;
 
             
-              ajaxRequest.open("GET", "ajax/busquedaEmpleado.php" + queryString, true);
+              ajaxRequest.open("GET", "ajax/saveEmpleado.php" + queryString, true);
               ajaxRequest.send(null); 
 }
 

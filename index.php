@@ -20,6 +20,7 @@ require_once "conexion.php";
     <input type="text" name="domiclio" id="domicilio" placeholder="Domicilio"><br />
     <input type="text" name="tel" id="tel" placeholder="Telefono"><br />
     <input type="text" name="mail" id="mail" placeholder="Correo electronico"><br />
-    <button>Guardar</button>
+    <button onclick="guardarCrud()">Guardar</button>
+    <div id="info"></div>
 </body>
 </html>
