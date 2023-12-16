@@ -12,18 +12,14 @@
 
 require_once "conexion.php";
 
-$query="select * from empleado";
-$resultado=mysqli_query($dbcon,$query);
-//var_dump($resultado);
-while($datos=mysqli_fetch_array($resultado)){
-    echo $datos['nombre']."<br />";
-    echo $datos['appat']."<br />";
-    echo $datos['apmat']."<br />";
-}
 ?>
-    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-    <input type="text" name="appat" id="appat"  placeholder="Apellido Paterno">
-    <input type="text" name="apmat" id="apmat" placeholder="Apellido Materno">
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br />
+    <input type="text" name="appat" id="appat"  placeholder="Apellido Paterno"><br />
+    <input type="text" name="apmat" id="apmat" placeholder="Apellido Materno"><br />
+    <input type="text" name="rfc" id="rfc" placeholder="RFC"><br />
+    <input type="text" name="domiclio" id="domicilio" placeholder="Domicilio"><br />
+    <input type="text" name="tel" id="tel" placeholder="Telefono"><br />
+    <input type="text" name="mail" id="mail" placeholder="Correo electronico"><br />
     <button>Guardar</button>
 </body>
 </html>
